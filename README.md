@@ -1,75 +1,64 @@
-# React + TypeScript + Vite
+# FakeStore E-Commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack e-commerce application built with React, TypeScript, Redux Toolkit, React Query, and Firebase.  
+The project includes authentication, product management, shopping cart, order history, unit/integration tests, and a complete CI/CD pipeline that deploys to Vercel.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User Authentication (Register / Login / Logout) with Firebase Auth
+- Product Catalog with category filtering
+- Full CRUD for products (Create, Read, Update, Delete)
+- Shopping Cart with Redux Toolkit + sessionStorage persistence
+- Checkout that saves orders to Firestore
+- Order History page for logged-in users
+- Toast notifications
+- Responsive design
+- Unit tests & Integration tests (Jest + React Testing Library)
+- CI/CD pipeline with GitHub Actions
+- Automatic deployment to Vercel
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Frontend**
 
-## Expanding the ESLint configuration
+- React 18 + TypeScript
+- Vite
+- Redux Toolkit
+- React Query (TanStack Query)
+- React Router
+- React Testing Library + Jest
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Backend / Services**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Firebase Authentication
+- Cloud Firestore
+- Vercel (Hosting)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**DevOps**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- GitHub Actions (CI/CD)
+- Jest for testing
 
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js 18+
+- npm
+- A Firebase project
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
 
+```bash
+# Clone the repository
+git clone https://github.com/lukearoehm-cloud/Fake-Store-App-Deploy.git
+
+# Navigate into the project
+cd Fake-Store-App-Deploy
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
