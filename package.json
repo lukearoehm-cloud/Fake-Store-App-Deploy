@@ -38,6 +38,7 @@
     "jest-transform-stub": "^2.0.0",
     "ts-jest": "^29.4.12",
     "typescript": "^5.5.3",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "whatwg-fetch": "^3.6.20"
   }
 }
